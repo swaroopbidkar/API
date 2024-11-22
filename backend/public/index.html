@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Dashboard</title>
+   <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Transaction Dashboard</h1>
+    
+    <div>
+        <h3>Select Month:</h3>
+        <select id="monthSelect">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3" selected>March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+    </div>
+
+    <div>
+        <h3>Search transactions...</h3>
+        <input type="text" id="searchInput" placeholder="Search by title, description, or price">
+    </div>
+
+    <h2>Transaction Table</h2>
+    <table id="transactionTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity Sold</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Transactions will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <h2>Total Sales Statistics</h2>
+    <div id="statistics">
+        <p>Total Sales: <span id="totalSales"></span></p>
+        <p>Total Sold Items: <span id="totalSoldItems"></span></p>
+        <p>Total Unsold Items: <span id="totalUnsoldItems"></span></p>
+    </div>
+
+    <h2>Bar Chart (Price Range)</h2>
+    <canvas id="barChart" width="400" height="200"></canvas>
+
+    <h2>Pie Chart (Category Distribution)</h2>
+    <canvas id="pieChart" width="400" height="200"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
